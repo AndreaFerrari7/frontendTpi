@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import MainPage from "./pages/MainPage.js";
-import { BrowserRouter, Route, Switch } from "react-router-dom"; //{}=variabile
+import { Router, Route, Switch } from "react-router-dom"; //{}=variabile
 import "./styles.css";
 import Registration from "./pages/Registration.js";
 import AddPrenotazione from './pages/AddPrenotazione.js';
@@ -10,7 +10,7 @@ import MyPrenotazioni from './pages/MyPrenotazioni.js';
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Switch>
         <Route path="/" exact component={MainPage} />
         <Route path ="/registrazione" exact component={Registration}/>
@@ -18,7 +18,7 @@ function App() {
         <Route path ='/evento' exact component={Evento}/>
         <Route path = '/prenotazioni' exact component={MyPrenotazioni}/>
       </Switch>
-    </BrowserRouter>
+    </Router>
   );
 }
 
